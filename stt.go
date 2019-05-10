@@ -12,6 +12,9 @@ import (
 func main() {
 	speechToText, speechToTextErr := speechtotextv1.
 		NewSpeechToTextV1(&speechtotextv1.SpeechToTextV1Options{
+
+			//URL kan være annerledes hvis brukeren av programmet har valgt å benytte seg
+			//av en annen server. API-nøkkel er forskjellig for hver unike bruker av IBM.
 			URL:       "https://gateway-lon.watsonplatform.net/speech-to-text/api",
 			IAMApiKey: "kpZNfLM0WZnb7qR8OpyizZDC4zQYAzWT1l3rwk-QZvE7",
 		})
